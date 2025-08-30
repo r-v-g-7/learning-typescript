@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true   // optional: type-check those JS files
+  },
+  "include": ["./*"]
+}
