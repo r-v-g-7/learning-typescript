@@ -1,10 +1,11 @@
 // main.ts
-var myVariable = { name: "Alice" }; // now an object
-function hasName(obj) {
-    return !!obj &&
+var person = { age: 21, city: "Delhi" };
+function hasAge(obj) {
+    return (!!obj &&
         typeof obj === "object" &&
-        "name" in obj;
+        "age" in obj &&
+        typeof obj.age === "number");
 }
-if (hasName(myVariable)) {
-    console.log(myVariable.name); // → Alice
+if (hasAge(person)) {
+    console.log("Person's age is: ".concat(person.age)); // → Person's age is: 21
 }

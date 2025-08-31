@@ -1,12 +1,15 @@
 // main.ts
-let myVariable: unknown = { name: "Alice" };   // now an object
+let person: unknown = { age: 21, city: "Delhi" };
 
-function hasName(obj: any): obj is { name: string } {
-  return !!obj &&
+function hasAge(obj: any): obj is { age: number } {
+  return (
+    !!obj &&
     typeof obj === "object" &&
-    "name" in obj;
+    "age" in obj &&
+    typeof obj.age === "number"
+  );
 }
 
-if (hasName(myVariable)) {
-  console.log(myVariable.name);     // → Alice
+if (hasAge(person)) {
+  console.log(`Person's age is: ${person.age}`); // → Person's age is: 21
 }
