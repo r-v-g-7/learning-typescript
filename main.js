@@ -1,11 +1,10 @@
-// main.ts
-var person = { age: 21, city: "Delhi" };
-function hasAge(obj) {
+var product = { title: "HP Laptop", price: 45000 };
+function hasTitle(obj) {
     return (!!obj &&
         typeof obj === "object" &&
-        "age" in obj &&
-        typeof obj.age === "number");
+        "title" in obj &&
+        typeof obj.title === "string");
 }
-if (hasAge(person)) {
-    console.log("Person's age is: ".concat(person.age)); // → Person's age is: 21
+if (hasTitle(product)) {
+    console.log("Product title is: ".concat(product.title)); // → Product title is: HP Laptop
 }

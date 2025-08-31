@@ -1,15 +1,14 @@
-// main.ts
-let person: unknown = { age: 21, city: "Delhi" };
+let product: unknown = { title: "HP Laptop", price: 45000 };
 
-function hasAge(obj: any): obj is { age: number } {
+function hasTitle(obj: any): obj is { title: string } {
   return (
     !!obj &&
     typeof obj === "object" &&
-    "age" in obj &&
-    typeof obj.age === "number"
+    "title" in obj &&
+    typeof obj.title === "string"
   );
 }
 
-if (hasAge(person)) {
-  console.log(`Person's age is: ${person.age}`); // → Person's age is: 21
+if (hasTitle(product)) {
+  console.log(`Product title is: ${product.title}`); // → Product title is: HP Laptop
 }
